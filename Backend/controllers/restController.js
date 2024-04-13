@@ -28,10 +28,10 @@ const signUp = async(req,res) => {
             username,
             password: hashedPassword
         })
-        const userID = result.insertedId;
+        const userID = result._id;
         const token = generateToken(userID, username);
         
-        res.status(201).json({ token, userID});
+        res.status(201).json({ token });
 
 
     }catch(err){
@@ -40,4 +40,26 @@ const signUp = async(req,res) => {
     }
 }
 
-export { signUp };
+const signIn = async (req,res) =>{
+    const {username , password } = req.body;
+    try{
+        const findedUser = await client.db().collection('users').findOne({username});
+        if (!findedUser){
+            res.status(404).json({message : "username not finded"});
+        }
+        const comparisonResult = await bcrypt.compare(
+            password,findedUser.password
+        );
+        if(comparisonResult){
+            const token = generateToken(findedUser._id, username);
+            res.json({token});
+        }else{
+            res.status(401).json({ message: "Incorrect password" });
+        }
+    }catch(err){
+        console.error('Error finding the user in the database');
+        res.status(500).json({error:'Internal error server'});
+    }
+}
+
+export { signUp, signIn };

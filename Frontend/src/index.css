@@ -1,8 +1,8 @@
 
 body {
-  background-color:  rgb(62,62,66); /* Cambia este valor al color de fondo que desees */
-  margin: 0; /* Ajusta el margen si es necesario */
-  padding: 0; /* Ajusta el relleno si es necesario */
+  background-color: #dbd6ed; ; /* Cambia este valor al color de fondo que desees */
+  margin: 0; 
+  padding: 0; 
   font-family: Helvetica, sans-serif;
   color: rgba(255, 255, 255, 0.87)
 }

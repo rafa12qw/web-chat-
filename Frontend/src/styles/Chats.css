@@ -1,0 +1,57 @@
+.color1 {color: #120907;}
+.color2 {color: #202441;}
+.color3 {color: #565b95;}
+.color4 {color: #999be8;}
+.color5 {color: #dbd6ed;}
+.chats-container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    .container {
+        border: 1px solid white;
+        border-radius: 10px;
+        width: 65%;
+        height: 80%;
+        display: flex;
+        overflow: hidden;
+
+        .sidebar{
+            flex: 1;
+            background-color: #202441;
+            .navbar{
+                display: flex;
+                align-items: center;
+                background-color: #120907;
+                height: 50px;
+                padding: 10px;
+                justify-content: space-between;
+                .logo{
+                    font-weight: bold;
+                }
+                .user{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    img{
+                        background-color: #dbd6ed;
+                        height: 24px;
+                        width: 24px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    button{
+                        background-color: #565b95;
+                        color: #dbd6ed;
+                        border: none;
+                    }
+                }
+                }
+                
+        }
+        .chat{
+            flex: 2;
+            background-color: #565b95;
+        }
+    }
+}

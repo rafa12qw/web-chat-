@@ -17,8 +17,8 @@ function Home() {
             );
             //Stock of token JWT in localStorage
             localStorage.setItem("userToken",response.data.token);
-            //Stock of id in localStorage
-            localStorage.setItem("userID",response.data.userID);
+            //Stock of user in localStorage
+            localStorage.setItem("username",username);
             //navigate to chatPage
             navigate("/Chats");
         }

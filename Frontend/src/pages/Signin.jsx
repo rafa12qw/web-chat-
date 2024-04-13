@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./SignIn.css";
+import "../styles/Signin.css";
 
 function SignIn() {
     const [username, setUsername] = useState("");
@@ -19,13 +19,13 @@ function SignIn() {
             //Stock of token JWT in localStorage
             localStorage.setItem("userToken",response.data.token);
             //Stock of id in localStorage
-            localStorage.setItem("user",user);
+            localStorage.setItem("username",username);
             //navigate to chatPage
             navigate("/Chats");
         }
         catch(err){
             console.log(err);
-            setErrorMessage("error in signUp");
+            setErrorMessage(err.response.data.message);
         };
     }
 
@@ -51,7 +51,6 @@ function SignIn() {
                 />
                 <button type="submit">Sign up</button>
             </form>
-            <Link to="/Signin">Do you have an account already?</Link>
             {/* if errorMessage is set, add a <p> with its content */}
             {errorMessage && <p>{errorMessage}</p>}
         </div>
