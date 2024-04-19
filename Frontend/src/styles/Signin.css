@@ -1,8 +1,8 @@
 .signin-container {
     max-width: 400px;
     margin: 10% auto 0; 
-    padding: 20px;
-    background-color: #f0f0f0;
+    padding: 10px;
+    background-color: #999be8;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -28,7 +28,7 @@
 
 .signin-container button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #565b95;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -37,20 +37,10 @@
 }
 
 .signin-container button:hover {
-    background-color: #0056b3;
-}
-
-.signin-container a {
-    margin-top: 10px;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.signin-container a:hover {
-    text-decoration: underline;
+    background-color: #202441;
 }
 
 .signin-container p {
     margin-top: 10px;
-    color: #dc3545;
+    color: #ee0707;
 }

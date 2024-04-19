@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Chats from "./pages/Chats";
 import Signin from './pages/Signin';
+import PrivateRoute from "./components/PrivateRoute";
 import"./index.css"
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Chats" element={<Chats />} />
+        <Route path="/Chats" element={<PrivateRoute element={<Chats/>}/>} />
         <Route path="/signin" element={<Signin />} />
       </Routes>
     </Router>

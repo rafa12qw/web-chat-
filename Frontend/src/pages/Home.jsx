@@ -24,7 +24,7 @@ function Home() {
         }
         catch(err){
             console.log(err);
-            setErrorMessage("error in signUp");
+            setErrorMessage(err.response.data.message);
         };
     }
 

@@ -31,6 +31,7 @@ function SignIn() {
 
     return (
         <div className="signin-container">
+            <h2>Welcome Back!</h2>
             Log in with your acccount
             <form onSubmit={handleSignUp}>
                 <input
@@ -49,7 +50,7 @@ function SignIn() {
                     minLength={4}
                     required
                 />
-                <button type="submit">Sign up</button>
+                <button type="submit">Log in</button>
             </form>
             {/* if errorMessage is set, add a <p> with its content */}
             {errorMessage && <p>{errorMessage}</p>}

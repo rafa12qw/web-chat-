@@ -26,6 +26,7 @@
                 height: 50px;
                 padding: 10px;
                 justify-content: space-between;
+                gap: 5px;
                 .logo{
                     font-weight: bold;
                 }
@@ -44,10 +45,25 @@
                         background-color: #565b95;
                         color: #dbd6ed;
                         border: none;
+                        cursor: pointer;
                     }
                 }
-                }
                 
+            }
+            .search{
+                border-bottom: 1px solid gray;
+                .searchForm{
+                    input{
+                        background-color: transparent;
+                        border: none;
+                        color: white;
+                        outline: none;
+                        &::placeholder{
+                            color: lightgray;
+                        }
+                    }
+                }
+            }
         }
         .chat{
             flex: 2;
